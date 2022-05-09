@@ -1,0 +1,179 @@
+/* 
+## Colors
+
+### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%)
+
+*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+.page {
+	height: 100vh;
+	background-color: hsl(229, 57%, 11%);
+	background-image: url(../images/bg-desktop.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: contain;
+}
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-end;
+	gap: 40px;
+}
+.page .box {
+	background-color: hsl(228, 56%, 26%);
+	padding: 40px;
+}
+.page .box:first-child {
+	border-radius: 20px;
+   border-top-right-radius: 125px;
+	padding: 40px;
+	width: 35%;
+}
+.page .box:first-child .logo {
+	margin-bottom: 30px;
+}
+.page .box:first-child .icons {
+	list-style-type: none;
+	display: flex;
+	gap: 15px;
+}
+.page .box:first-child .icons li {
+	background-color: hsl(229, 57%, 11%);
+	padding: 10px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.page .box:last-child {
+	border-radius: 20px;
+	width: 55%;
+	position: relative;
+}
+.page .box:last-child h4 {
+	color: hsl(229, 7%, 55%);
+	font-weight: normal;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+.page .box:last-child h4 span {
+	color: hsl(243, 100%, 93%);
+	font-weight: bold;
+}
+.page .box:last-child .prog-holder {
+	width: 100%;
+	background-color: hsl(229, 57%, 11%);
+	height: 18px;
+	border-radius: 12px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.page .box:last-child .prog-holder .prog {
+	display: inline-block;
+	height: 100%;
+	border-radius: 12px;
+	border: 2px solid hsl(229, 57%, 11%);
+	background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+	position: relative;
+}
+.page .box:last-child .prog-holder .prog::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: hsl(243, 100%, 93%);
+	position: absolute;
+	right: 1px;
+	top: 2px;
+}
+.page .box:last-child .prog-holder .rest {
+	background-color: hsl(243, 100%, 93%);
+	font-size: 1.7em;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	max-width: 270px;
+	text-transform: uppercase;
+	border-radius: 12px;
+	position: absolute;
+	bottom: 70px;
+	right: 10px;
+}
+.page .box:last-child .prog-holder .rest::before {
+	content: "";
+	border-width: 40px;
+	border-style: solid;
+	border-color: transparent hsl(243, 100%, 93%) transparent transparent;
+	position: absolute;
+	right: 0;
+	bottom: -20px;
+}
+.page .box:last-child .prog-holder .rest p {
+	font-size: 17px;
+}
+.page .box:last-child .info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: hsl(243, 100%, 93%);
+	font-weight: 600;
+}
+@media (max-width: 1400px) {
+	.page {
+		background-size: cover;
+	}
+}
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+	.page .box:first-child,
+	.page .box:last-child {
+		width: 100%;
+	}
+	.page .box:last-child .prog-holder .rest {
+		bottom: -120px;
+		right: 40px;
+	}
+	.page .box:last-child .prog-holder .rest::before {
+		display: none;
+	}
+}
